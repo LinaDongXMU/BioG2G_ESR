@@ -22,13 +22,13 @@ Ensure your JSON database (e.g., SHJT_EnzymeMap_cleaned_smarts2_recursion.json) 
 You can call the recommend_enzymes function within the script:
 
 
-'''
+```
 from enzyme_sequence_recommender import recommend_enzymes
 
 # Example: Amide hydrolysis or your retrosynthesis result
 query = "CC1=CC=C(S(N(CC=C)CC=C)(=O)=O)C=C1>>CC1=CC=C(S(N2CC=CC2)(=O)=O)C=C1"
 recommend_enzymes(query, db, top_k=10)
-'''
+```
 
 ### 2.3 Output Categories
 High Confidence: Candidates where the structural template matches the query reaction center perfectly.
