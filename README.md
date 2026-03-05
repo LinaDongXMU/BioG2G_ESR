@@ -3,7 +3,7 @@ Unified Graph-to-Graph Retrosynthesis and Enzyme Sequence Recommendation for Bio
 
 ## 1. Installation
 System Requirements
-
+```
 Python ≥ 3.8
 
 PyTorch 2.0
@@ -11,8 +11,8 @@ PyTorch 2.0
 CUDA 11.8
 
 Linux (tested on Ubuntu)
-
-## 1.1 Create a Conda Environment
+```
+### 1.1 Create a Conda Environment
 
 We recommend creating a dedicated conda environment for BioG2G.
 ```
@@ -23,7 +23,7 @@ Install PyTorch 2.0 with CUDA 11.8:
 ```
 conda install pytorch==2.0.0 torchvision==0.15.0 torchaudio==2.0.0 pytorch-cuda=11.8 -c pytorch -c nvidia
 ```
-## 1.2 Install Unicore
+### 1.2 Install Unicore
 
 BioG2G is built on top of the Unicore framework.
 
@@ -40,22 +40,60 @@ Install additional utilities:
 ```
 pip install matplotlib cmake lit
 ```
-## 1.3 Install UniMol+
+### 1.3 Install UniMol+
 
 Install the UniMol+ module included in this repository:
 ```
 cd unimol_plus
 pip install .
 ```
-## 1.4 Install Additional Dependencies
+### 1.4 Install Additional Dependencies
 
 Install the remaining Python libraries required for retrosynthesis modeling and data processing:
 ```
 pip install numba rdchiral transformers tokenizers omegaconf rdkit timeout_decorator scikit-learn
 ```
 
+## 2. BioG2G
+### 2.1 Download Dataset and Checkpoints
 
+Before running BioG2G, please download the required dataset and model checkpoints, and place them in the parent directory of this repository:
+```
+..
+├── dataset
+├── checkpoint
+└── BioG2G
+```
+### 2.2 Single Molecule Inference
 
+To perform retrosynthesis prediction for a single molecule, you can use get_result.py.
+
+First, open get_result.py and modify the input SMILES at the end of the file:
+```
+smi = "CC(C)C(=O)C1=CC=CC=C1"
+```
+Replace it with the molecule you want to predict.
+
+Then run:
+```
+python get_result.py
+```
+The model will generate retrosynthesis predictions for the input molecule.
+
+### 2.3 Large-scale Evaluation (Recommended)
+
+For large-scale prediction or dataset evaluation, we recommend using the validation script, which is more efficient in terms of time and memory usage.
+
+Run:
+```
+sh valid_biochem_plus.sh ../checkpoint/main/plus/checkpoint_best.pt
+```
+### 2.4 Training
+
+To train BioG2G on the BioChem-Plus dataset, run:
+```
+sh train_biochem_plus.sh
+```
 ## 3. Enzyme Sequence Recommender
 This tool, enzyme_sequence_recommender.py, is designed to bridge the gap between retrosynthetic prediction and enzymatic validation. Once you have obtained a predicted reaction (the transformation of reactants to products), you can input it into this script to identify the most suitable enzyme sequences from a preprocessed database.
 
