@@ -90,12 +90,21 @@ Run:
 ```
 sh valid_biochem_plus.sh ../checkpoint/main/plus/checkpoint_best.pt
 ```
+The results is located under:
+```
+../checkpoint/main/plus/checkpoint_best
+```
 ### 2.4 Training
 
 To train BioG2G on the BioChem-Plus dataset, run:
 ```
 sh train_biochem_plus.sh
 ```
+In the training script (train_biochem_plus.sh), you can modify the following parameter to control where the trained model checkpoints are saved:
+```
+save_dir="../outputs_biochem_plus/${base_name}"
+```
+You can change this path to specify a different directory for saving model parameters and training outputs.
 ## 3. Enzyme Sequence Recommender
 This tool, enzyme_sequence_recommender.py, is designed to bridge the gap between retrosynthetic prediction and enzymatic validation. Once you have obtained a predicted reaction (the transformation of reactants to products), you can input it into this script to identify the most suitable enzyme sequences from a preprocessed database.
 
