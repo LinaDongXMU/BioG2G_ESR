@@ -55,6 +55,8 @@ pip install numba rdchiral transformers tokenizers omegaconf rdkit timeout_decor
 ```
 
 ## 2. BioG2G
+BioG2G is a graph-to-graph biocatalytic retrosynthesis model that predicts possible reactant molecules from a given target product.
+Given a product as input, the model generates plausible precursor structures that could lead to the target compound through enzymatic reactions.
 ### 2.1 Download Dataset and Checkpoints
 
 Before running BioG2G, please download the required dataset and model checkpoints, and place them in the parent directory of this repository:
