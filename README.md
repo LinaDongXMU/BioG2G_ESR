@@ -78,6 +78,7 @@ Replace it with the molecule you want to predict.
 
 Then run:
 ```
+export MKL_THREADING_LAYER=GNU
 python get_result.py
 ```
 The model will generate retrosynthesis predictions for the input molecule.
