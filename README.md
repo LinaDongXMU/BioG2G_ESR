@@ -40,11 +40,11 @@ Install additional utilities:
 ```
 pip install matplotlib cmake lit
 ```
-### 1.3 Install UniMol+
+### 1.3 Install UniMol
 
-Install the UniMol+ module included in this repository:
+Install the UniMol module included in this repository:
 ```
-cd unimol_plus
+cd unimol_v2
 pip install .
 ```
 ### 1.4 Install Additional Dependencies
@@ -89,21 +89,21 @@ For large-scale prediction or dataset evaluation, we recommend using the validat
 
 Run:
 ```
-sh valid_biochem_plus.sh ../checkpoint/main/plus/checkpoint_best.pt
+sh valid_unimolv2_biochem_plus.sh ../checkpoint/stereo/plus/checkpoint_best.pt
 ```
 The results is located under:
 ```
-../checkpoint/main/plus/checkpoint_best
+../checkpoint/stereo/plus/checkpoint_best
 ```
 ### 2.4 Training
 
 To train BioG2G on the BioChem-Plus dataset, run:
 ```
-sh train_biochem_plus.sh
+sh train_unimolv2_biochem_plus.sh
 ```
-In the training script (train_biochem_plus.sh), you can modify the following parameter to control where the trained model checkpoints are saved:
+In the training script (train_unimolv2_biochem_plus.sh), you can modify the following parameter to control where the trained model checkpoints are saved:
 ```
-save_dir="../outputs_biochem_plus/${base_name}"
+save_dir="../outputs_biochem_plus/weights/${task_type}/$(date '+%Y-%m-%d')/${base_name}"
 ```
 You can change this path to specify a different directory for saving model parameters and training outputs.
 ## 3. Enzyme Sequence Recommender
