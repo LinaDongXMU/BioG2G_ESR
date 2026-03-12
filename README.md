@@ -1,6 +1,6 @@
 # BioG2G_ESR
 Unified Graph-to-Graph Retrosynthesis and Enzyme Sequence Recommendation for Biocatalytic Design
-
+![BioG2G_ESR workflow](figures/TOC.png)
 ## 1. Installation
 System Requirements
 ```
@@ -57,6 +57,7 @@ pip install numba rdchiral transformers tokenizers omegaconf rdkit timeout_decor
 ## 2. BioG2G
 BioG2G is a graph-to-graph biocatalytic retrosynthesis model that predicts possible reactant molecules from a given target product.
 Given a product as input, the model generates plausible precursor structures that could lead to the target compound through enzymatic reactions.
+![BioG2G workflow](figures/BioG2G.png)
 ### 2.1 Download Dataset and Checkpoints
 
 Before running BioG2G, please download the required dataset and model checkpoints, and place them in the parent directory of this repository:
@@ -108,7 +109,7 @@ save_dir="../outputs_biochem_plus/weights/${task_type}/$(date '+%Y-%m-%d')/${bas
 You can change this path to specify a different directory for saving model parameters and training outputs.
 ## 3. Enzyme Sequence Recommender
 This tool, enzyme_sequence_recommender.py, is designed to bridge the gap between retrosynthetic prediction and enzymatic validation. Once you have obtained a predicted reaction (the transformation of reactants to products), you can input it into this script to identify the most suitable enzyme sequences from a preprocessed database.
-
+![ESR workflow](figures/ESR.png)
 ### 3.1 Workflow
 The recommendation process follows a two-stage validation strategy to ensure high-accuracy results:
 
