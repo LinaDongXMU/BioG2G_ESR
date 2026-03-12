@@ -1,6 +1,7 @@
 # BioG2G_ESR
 Unified Graph-to-Graph Retrosynthesis and Enzyme Sequence Recommendation for Biocatalytic Design
-<img src="figures/TOC.png" width="600">
+
+<img src="figures/TOC.png" width="700">
 ## 1. Installation
 System Requirements
 ```
