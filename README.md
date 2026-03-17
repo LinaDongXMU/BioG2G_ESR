@@ -114,7 +114,7 @@ You can change this path to specify a different directory for saving model param
 ## 3. Enzyme Sequence Recommender
 This tool, enzyme_sequence_recommender.py, is designed to bridge the gap between retrosynthetic prediction and enzymatic validation. Once you have obtained a predicted reaction (the transformation of reactants to products), you can input it into this script to identify the most suitable enzyme sequences from a preprocessed database.
 
-![BioG2G workflow](figures/BioG2G.png)
+![ESR workflow](figures/ESR.png)
 
 ### 3.1 Workflow
 The recommendation process follows a two-stage validation strategy to ensure high-accuracy results:
