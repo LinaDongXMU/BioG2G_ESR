@@ -42,7 +42,7 @@ Install additional utilities:
 ```
 pip install matplotlib cmake lit
 ```
-### 1.3 Install UniMol
+### 1.3 Install UniMolv2
 
 Install the UniMol module included in this repository:
 ```
