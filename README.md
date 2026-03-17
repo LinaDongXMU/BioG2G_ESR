@@ -128,7 +128,7 @@ Phase 2: SMARTS Substructure Ranking Performs a deep-dive verification by matchi
 Organize your retrosynthetic output into a standard Reaction SMILES format: ReactantA.ReactantB>>ProductA.
 
 2. Preprocess the Database
-Ensure your JSON database (e.g., SHJT_EnzymeMap_cleaned_smarts2_recursion.json) is in the same directory. On the first run, the script will generate a .pkl cache to speed up future queries.
+Ensure your JSON database (e.g., template_library_smarts_recursion.json) is in the same directory. On the first run, the script will generate a .pkl cache to speed up future queries.
 
 3. Run the Script
 You can call the recommend_enzymes function within the script:
