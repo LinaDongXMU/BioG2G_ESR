@@ -1,5 +1,5 @@
 # BioG2G_ESR
-Unified Graph-to-Graph Retrosynthesis and Enzyme Sequence Recommendation for Biocatalytic Design
+Enhancing Biocatalytic Retrosynthesis with a Graph-to-Graph Model
 
 <img src="figures/TOC.png" width="700">
 
