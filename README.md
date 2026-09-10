@@ -146,3 +146,6 @@ recommend_enzymes(query, db, top_k=10)
 High Confidence: Candidates where the structural template matches the query reaction center perfectly.
 
 Medium Confidence: Candidates with high fingerprint similarity but where the specific template match is weaker or not applicable.
+
+## 4. Citation
+DOI: [10.1039/D6SC04187F](https://doi.org/10.1039/D6SC04187F)
